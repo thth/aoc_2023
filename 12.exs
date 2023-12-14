@@ -39,7 +39,6 @@ defmodule Twelve do
       pattern_list =
         pattern
         |> String.graphemes()
-        |> then(fn p -> ["." | p] end)
         |> remove_multiple_dots()
       {pattern_list, Enum.map(groups, &String.to_integer/1)}
     end)
